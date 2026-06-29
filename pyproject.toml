@@ -1,0 +1,68 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name        = "ml-dsa"
+version     = "1.0.0"
+description = "FIPS 204 ML-DSA (Module-Lattice-Based Digital Signature) – pure Python"
+readme      = "README.md"
+license     = { text = "MIT" }
+requires-python = ">=3.10"
+
+keywords = [
+    "ml-dsa", "dilithium", "post-quantum", "cryptography",
+    "digital-signature", "lattice", "fips-204",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+]
+
+dependencies = []    # pure-stdlib – no external runtime dependencies
+
+[project.optional-dependencies]
+dev  = ["pytest>=7.4", "pytest-cov>=4.1", "mypy>=1.8"]
+lint = ["ruff>=0.3"]
+
+[project.urls]
+Repository = "https://github.com/your-username/ml-dsa-python"
+"Bug Tracker" = "https://github.com/your-username/ml-dsa-python/issues"
+
+# ── pytest ───────────────────────────────────────────────────────────────────
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "-v --tb=short"
+
+# ── coverage ─────────────────────────────────────────────────────────────────
+
+[tool.coverage.run]
+source = ["ml_dsa"]
+omit   = ["tests/*", "examples/*", "benchmarks/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+# ── mypy ─────────────────────────────────────────────────────────────────────
+
+[tool.mypy]
+python_version         = "3.10"
+strict                 = false
+ignore_missing_imports = true
+
+# ── ruff ─────────────────────────────────────────────────────────────────────
+
+[tool.ruff]
+line-length = 100
+select      = ["E", "F", "I"]
+ignore      = ["E501"]
