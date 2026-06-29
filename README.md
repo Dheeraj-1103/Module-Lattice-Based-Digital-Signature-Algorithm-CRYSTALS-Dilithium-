@@ -205,8 +205,8 @@ Ensure you have **Python 3.10** or higher installed.
 Clone the repository and install it in editable mode:
 
 ```bash
-git clone https://github.com/Dheeraj-1103/Module-Lattice-Based-Digital-Signature-Algorithm-CRYSTALS-Dilithium.git
-cd Module-Lattice-Based-Digital-Signature-Algorithm-CRYSTALS-Dilithium
+git clone https://github.com/Dheeraj-1103/Module-Lattice-Based-Digital-Signature-Algorithm.git
+cd Module-Lattice-Based-Digital-Signature-Algorithm
 pip install -e .
 ```
 
@@ -412,7 +412,7 @@ If you use this implementation in an academic project, publication, or security 
   year         = {2026},
   publisher    = {GitHub},
   journal      = {GitHub Repository},
-  howpublished = {\url{https://github.com/your-username/Module-Lattice-Based-Digital-Signature-Algorithm-CRYSTALS-Dilithium}}
+  howpublished = {\url{https://github.com/your-username/Module-Lattice-Based-Digital-Signature-Algorithm}}
 }
 ```
 
